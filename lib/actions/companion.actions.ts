@@ -27,7 +27,7 @@ export const getAllCompanions = async ( {limit = 10, page = 1, subject, topic} :
     } else if (subject) {
         query = query.like('subject', `%${subject}%`);
     } else if (topic) {
-        query = query.like('subject', `%${subject}%`);
+        query = query.like('topic', `%${topic}%`);
     }
 
     query = query.range((page - 1) * limit, page * limit - 1);
